@@ -1,0 +1,218 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgb(15, 136, 106);
+  /*background-color: #f1f1f1;*/
+  padding: 20px 30px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: rgb(140, 202, 142);
+}
+
+/* Style the search box inside the navigation bar */
+.header input[type=text] {
+  float: left;
+  padding: 6px;
+  border: none;
+  width: 40%;
+  margin-top: 8px;
+  margin-left: 40px;
+  font-size: 17px;
+}
+
+.header .search-container button {
+  float: left;
+  padding: 6px 20px;
+  margin-top: 8px;
+  margin-left: 1px;
+  background: #4CAF50;
+  color: white;
+  /*background: #ddd;*/
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.header .search-container button:hover {
+  background: rgb(140, 202, 142);
+}
+
+.header a.active {
+  color: #4CAF50;
+}
+
+.header-right {
+  float: right;
+  padding: 0px 30px;
+}
+
+nav {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.navbar {
+  margin-top: 20px;
+  overflow: hidden;
+  background-color: rgb(15, 136, 106);
+  color: white;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: rgb(140, 202, 142);
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+ 
+.mySlides {
+  padding: 20px 20px;
+  width: 800px;
+  height: 400px;
+}
+
+img {
+  /*display: block;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.band {
+  text-align: center;
+  justify-content: center;
+  padding: 0px 90px;
+  color: black;
+}
+
+.band div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  /*background-color: rgb(15, 136, 106);*/
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 10%;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 80px;
+  position: relative;
+  align-items: center;
+}
+
+.column p {
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 293px;
+  height: 200px;
+}
+
+.overlay { 
+  position: absolute;
+  bottom: 0; 
+  background: rgb(54, 129, 56);
+  background: rgba(54, 129, 56, 0.5);
+  /*background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); Black see-through */
+  width: 293px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 7px;
+  text-align: center;
+}
+
+.column:hover .overlay {
+  opacity: 1;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(15, 136, 106);
+  color: white;
+  text-align: center;
+}
+
+.footer a {
+  color: white;
+  font-size: 20px;
+ letter-spacing: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header .search-container {
+    float: none;
+  }
+  
+  .header-right {
+    float: none;
+  }
+
+  .header a, .header input[type=text], .header .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .header input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  .column {
+    width: 100%;
+  }
+}
